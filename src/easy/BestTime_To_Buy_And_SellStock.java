@@ -41,7 +41,7 @@ public class BestTime_To_Buy_And_SellStock {
      * Example 2:
      * Input: [7,6,4,3,1]
      * Output: 0
-     * Explanation: In this case, no transaction is done, i.e. max profit = 0.
+     * Explanation: In this case, no transaction is done, i.e. max profit = 0..
      *
      */
     public static void main(String[] args) {
