@@ -12,15 +12,15 @@ public class WordDictionary {
 
     }
 
-    public boolean search(String word) {
-
-    }
-
-    public static void main(String[] args) {
-        WordDictionary obj = new WordDictionary();
-        obj.addWord(word);
-        boolean param_2 = obj.search(word);
-
-        System.out.println(param_2);
-    }
+//    public boolean search(String word) {
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        WordDictionary obj = new WordDictionary();
+//        obj.addWord(word);
+//        boolean param_2 = obj.search(word);
+//
+//        System.out.println(param_2);
+//    }
 }
