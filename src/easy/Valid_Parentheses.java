@@ -13,19 +13,19 @@ public class Valid_Parentheses {
         StringBuilder sb = new StringBuilder(s);
         List<Character> collect = sb.chars().boxed().map(v -> (char) Integer.parseInt(String.valueOf(v))).collect(Collectors.toList());
 
-        List<Character> startParenthese = Arrays.asList('(','[','{');
+        List<Character> startParenthese = Arrays.asList('(', '[', '{');
         try {
             collect.stream().forEach(
                     a -> {
-                        if(startParenthese.contains(a)) {
+                        if (startParenthese.contains(a)) {
                             stack.add(a);
                         } else {
                             char peek = (char) stack.peek();
-                            if(')' == a && '(' == peek) {
+                            if (')' == a && '(' == peek) {
                                 stack.pop();
                             } else if (']' == a && '[' == peek) {
                                 stack.pop();
-                            } else if ('}' == a &&'{' == peek) {
+                            } else if ('}' == a && '{' == peek) {
                                 stack.pop();
                             } else {
                                 throw new IllegalArgumentException("");
@@ -41,35 +41,33 @@ public class Valid_Parentheses {
     }
 
     /**
-     *
      * Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-     *
+     * <p>
      * An input string is valid if:
-     *
+     * <p>
      * Open brackets must be closed by the same type of brackets.
      * Open brackets must be closed in the correct order.
      * Note that an empty string is also considered valid.
-     *
+     * <p>
      * Example 1:
      * Input: "()"
      * Output: true
-     *
+     * <p>
      * Example 2:
      * Input: "()[]{}"
      * Output: true
-     *
+     * <p>
      * Example 3:
      * Input: "(]"
      * Output: false
-     *
+     * <p>
      * Example 4:
      * Input: "([)]"
      * Output: false
-     *
+     * <p>
      * Example 5:
      * Input: "{[]}"
      * Output: true
-     *
      */
 
     public static void main(String[] args) {
